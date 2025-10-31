@@ -1,38 +1,47 @@
 import Navbar from "./Navbar";
+import React from "react";
 import video from '../assets/Video.png'
 import container from '../assets/Container.png'
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet"></link>
 
 export default function Header() {
+// const [c, setc] = React.useState('red');
+//     React.useEffect(() => {
+//         setInterval(() => {
+//             setc(c+c)
+//         }, 1000)
+//     }, [c])
     return (
-        <div className="relative w-full ">
-            <div className="relative flex min-h-[90vh] bg-[#0052B4] shadow-lg ">
-                <div className="absolute top-0 left-0 w-full">
-                    <Navbar />
-                </div>
+        <div className="w-full">
+            <div className="relative flex justify-between items-start min-h-[90vh] sm:p-10 md:p-20 bg-[#0052B4] bg-cover bg-center">
 
-                <div className="flex flex-col justify-center w-1/2 h-[60vh]">
-                    <div className="max-w-[500px] break-words whitespace-normal leading-tight mx-auto ">
+                <div className="w-1/2 flex flex-col justify-center items-start pt-5">
+                    <div className=" break-words whitespace-normal leading-tight w-7/10">
                         <p className="text-[#FFD84D] text-3xl">REWABLE ENERGY</p>
-                        <h1 className="text-white text-6xl font-bold max-w-[500px]">
+                        <h1 className="text-white text-6xl font-bold ">
                             Digital in the Future of Energy
                         </h1>
                     </div>
                 </div>
 
-                <div className="flex flex-col justify-center w-1/2 h-[60vh]">
-                    <div className="max-w-[400px] break-words whitespace-normal leading-tight mx-auto ">
+                <div className="w-1/2 flex flex-col justify-center items-center p-10">
+                    <div className="break-words whitespace-normal leading-tight w-6/10 space-y-3">
                         <h1 className="text-white text-2xl font-bold">
                             Enable reliable, cost effective and dispatchable power
                         </h1>
-                        <p className="text-[#FFD84D] text-1xl">
+                        <p className="text-white text-1xl">
                             Sun Energy has accumulated more than 9 gigawatts of total global installed base and backlog for its inverter technology...
                         </p>
                     </div>
                 </div>
 
             </div>
-            <div className="absolute flex items-end bottom-[10px] ml-25">
+            <div className="w-full min-h-[10vh] bg-gradient-to-b from-blue-600 to-white shadow-[0_10px_300px_-600px_rgba(0,0,0,0.5)] drop-shadow-[0_60px_90px_rgba(9,132,199,0.45)]"></div>
+            {/* ------------------------------------------------------------------------------------------------------ */}
+            <div className="absolute top-0 left-0 w-full">
+                    <Navbar />
+                </div>
+            <div className="absolute flex items-end bottom-[10px] sm:px-10 md:px-20 ">
                 {/* First card */}
                 <div className="relative flex flex-col justify-around items-center px-3
                     bg-white/80 w-[270px] h-[340px] rounded-2xl 
@@ -54,8 +63,6 @@ export default function Header() {
                 </div>
 
             </div>
-
-            <div className="w-full min-h-[10vh] bg-gradient-to-b from-gray-500 to-white shadow-[0_-10px_30px_-10px_rgba(0,0,0,0.5)]"></div>
         </div>
     );
 }
