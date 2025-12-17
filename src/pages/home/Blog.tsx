@@ -4,8 +4,9 @@ import Image3 from "../../assets/sixth/image3.png"
 import Card from "../../components/Card"
 export default function Blog() {
     return (
-        <div className="h-[120vh] bg-white p-5 sm:p-10 md:p-20">
-            <div className="w-full h-full bg-white rounded-xl">
+        <div id="blog" className="max-h-screen bg-white p-5 
+        sm:px-10 md:px-20 lg:px-30 el:px-40 ">
+            <div className="w-full h-full">
                 <div className="p-5 flex flex-col gap-3">
                     <p className="inline-block border-l-4 border-emerald-400 pl-3 text-40 font-semibold tracking-widest text-emerald-300">
                         Our Blog
@@ -27,15 +28,12 @@ export default function Blog() {
                     </div>
                 </div>
 
-                <div id="cards" className="flex justify-center items-center gap-5 w-full h-4/5">
+                <div id="cards" className="flex justify-center items-center gap-5 w-full h-4/5 md:py-10 2xl:py-20 el:py-30">
                     <Card image={Image1}/>
                     <Card image={Image2}/>
                     <Card image={Image3}/>
-                    
-                    
                 </div>
             </div>
-
         </div>
     )
 }
