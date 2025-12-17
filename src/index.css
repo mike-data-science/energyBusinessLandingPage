@@ -8,3 +8,7 @@
   }
 }
 
+@theme {
+  --breakpoint-el: 121rem;   /* ~1920px */
+}
+
